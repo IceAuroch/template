@@ -1,0 +1,62 @@
+#thanks-page {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background: url('../images/bg/thanks-page-bg.jpg') 50% 50% / cover no-repeat;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    @extend %pos;
+    background: url('../images/icon/decor/pattern.png');
+  }
+
+  .social-list {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}
+
+.thanks-page-item {
+  color: #fff;
+
+  .btn {
+    padding: 20px 80px;
+    text-transform: none;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+
+  &__description {
+    position: relative;
+    padding-left: 50px;
+    font-size: 18px;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+      padding-left: 30px;
+      font-size: 16px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 1px;
+      background: $primary;
+
+      @media (max-width: map_get($grid-breakpoints, sm)) {
+        left: 5px;
+        width: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+#format {
+    padding: 130px 0 100px;
+    background: #e6f6ff;
+    overflow: hidden;
+
+    .section-title {
+
+        &::before {
+            content: '';
+            @extend %pos;
+            left: -140px;
+            right: auto;
+            width: 120px;
+            background: url('../images/icon/decor/pattern-title.png');
+        }
+
+        &::after {
+            content: '';
+            @extend %pos;
+            left: auto;
+            right: -140px;
+            width: 120px;
+            background: url('../images/icon/decor/pattern-title.png');
+        }
+    }
+
+    .decor-circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: .5;
+
+        &--big {
+            left: -70px;
+            bottom: -80px;
+            width: 480px;
+            height: 480px;
+            border: 100px solid #fff;
+        }
+
+        &--middle {
+            top: 40%;
+            left: 65%;
+            width: 260px;
+            height: 260px;
+            border: 50px solid #fff;
+        }
+
+        &--little {
+            right: 15%;
+            bottom: 120px;
+            width: 110px;
+            height: 110px;
+            border: 30px solid #fff;
+        }
+    }
+}
+
+.format-card {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 23px 1px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+    background: #fff;
+    z-index: 10;
+
+    &-header {
+
+        &__title {
+            margin-bottom: 40px;
+            padding: 30px 15px;
+            font-weight: 500;
+            border-radius: 5px 5px 0 0;
+            background: #232f42;
+            color: #fff;
+        }
+    }
+
+    &-body {
+
+        &__type {
+            margin-left: 30px;
+            margin-bottom: 15px;
+            padding: 3px 10px;
+            display: inline-block;
+            border-radius: 3px;
+            font-weight: 500;
+            background: #232f42;
+            color: #fff;
+        }
+
+        &__description {
+            margin: 0 0 20px;
+            padding: 0 30px;
+        }
+
+        &-price {
+            margin-bottom: 20px;
+            padding: 20px 0;
+            background: #f4f4f4;
+
+            &__name {
+                color: #868686;
+            }
+
+            &__value {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &-footer {
+        padding: 0 50px 45px;
+
+        &__btn {
+            display: flex;
+            color: $dark;
+        }
+    }
+}

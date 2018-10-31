@@ -1,0 +1,27 @@
+@import "../../fonts/fonts.css";
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "base/body";
+@import "base/btn";
+@import "base/section";
+
+@import "modules/menu";
+@import "modules/forms";
+@import "modules/modals";
+@import "modules/sliders";
+
+@import "layout/app-header";
+@import "layout/header-banner";
+@import "layout/seminar";
+@import "layout/for-who";
+@import "layout/singup";
+@import "layout/about";
+@import "layout/programm";
+@import "layout/secondary";
+@import "layout/format";
+@import "layout/reviews";
+@import "layout/app-footer";
+@import "layout/thanks-page";

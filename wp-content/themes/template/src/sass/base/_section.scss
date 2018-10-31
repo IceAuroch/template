@@ -1,0 +1,49 @@
+section {
+    position: relative;
+}
+
+.section-title {
+    position: relative;
+    text-transform: uppercase;
+}
+
+.social-list {
+
+    &-item {
+
+        svg {
+            fill: #fff;
+            transition: .5s;
+        }
+
+        &--facebook {
+
+            &:hover {
+
+                svg {
+                    fill: #4154a8;
+                }
+            }
+        }
+
+        &--instagram {
+
+            &:hover {
+
+                svg {
+                    fill: #F99646;
+                }
+            }
+        }
+
+        &--youtube {
+
+            &:hover {
+
+                svg {
+                    fill: #c00;
+                }
+            }
+        }
+    }
+}

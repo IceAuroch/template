@@ -1,0 +1,18 @@
+#app-header {
+    @extend %pos;
+    bottom: auto;
+    padding-top: 50px;
+    z-index: 9999;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        padding-top: 20px;
+    }
+}
+
+.logo {
+    margin-top: -10px;
+
+    img {
+        width: auto;
+    }
+}

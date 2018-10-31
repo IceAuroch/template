@@ -1,0 +1,120 @@
+.menu {
+    position: relative;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #232f42;
+        display: none;
+    }
+
+    &-list {
+        position: relative;
+        margin-bottom: 0;
+
+        &-item {
+
+            &__link {
+                position: relative;
+                display: block;
+                padding-bottom: 30px;
+                font-size: 14px;
+                color: #fff;
+
+                @media (max-width: map_get($grid-breakpoints, md)) {
+                    font-size: 20px;
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                }
+
+                &:hover {
+                    color: #fff;
+
+                    &::before {
+                        left: 0;
+                        right: 0;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0;
+                    height: 3px;
+                    background: $primary;
+                    box-shadow: 0px 5px 8.4px 1.6px rgba(13, 127, 255, 0.27);
+                    transition: .5s;
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            @extend %pos;
+            top: auto;
+            height: 1px;
+            background: rgba(#fff, .2);
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                display: none;
+            }
+        }
+    }
+}
+
+.burger-menu {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    display: none;
+
+    .line {
+        width: 30px;
+        height: 2px;
+        margin-bottom: 6px;
+        background: #fff;
+        transition: .5s;
+
+        &--bottom {
+            margin-left: auto;
+            margin-right: 0;
+            width: 20px;
+        }
+    }
+
+    &:hover {
+
+        .line {
+
+            &--bottom {
+                width: 30px;
+            }
+        }
+    }
+
+    &.active {
+
+        .line {
+            position: absolute;
+            width: 0;
+
+            &--top {
+                width: 30px;
+                transform: rotate(45deg);
+            }
+
+            &--middle {
+                width: 30px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

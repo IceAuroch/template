@@ -1,0 +1,96 @@
+.format-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    padding: 0 0 30px;
+    width: 100%;
+    max-width: 320px;
+    z-index: 99;
+    border-radius: 5px;
+    background: #232f42;
+    background: rgba(#000, .85);
+    transition: .7s;
+    transition-delay: .1s;
+
+    &.active {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        background: url('../images/icon/decor/pattern.png');
+        z-index: -3;
+    }
+
+    &-header {
+
+        &__title {
+            padding: 30px 0;
+            border-radius: 5px 5px 0 0;
+            background: #fff;
+            color: $dark;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+    }
+
+    &-body {
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.modal-mask {
+    @extend %pos;
+    position: fixed;
+    background: rgba(#000, .85);
+    transform: scale(0);
+    transition: .5s;
+    z-index: 98;
+
+    &.active {
+        transform: scale(1);
+    }
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 4;
+
+    .line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background: $dark;
+        opacity: .7;
+        transition: .5s;
+
+        &--left {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &--right {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

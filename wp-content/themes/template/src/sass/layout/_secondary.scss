@@ -1,0 +1,25 @@
+#secondary {
+    padding: 80px 0;
+    background: url('../images/bg/secondary-bg.jpg') 50% 50% /cover no-repeat;
+
+    &::before {
+        content: '';
+        @extend %pos;
+        background: url('../images/icon/decor/pattern.png');
+    }
+}
+
+.secondary-item {
+
+    .btn {
+        padding: 15px 60px;    
+    }
+
+    &-description {
+        padding: 0 40px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding: 0;
+        }
+    }
+}

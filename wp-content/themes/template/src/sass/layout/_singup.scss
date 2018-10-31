@@ -1,0 +1,14 @@
+#singup {
+    padding: 120px 0;
+    background: url('../images/bg/singup-bg.jpg') 50% 50% /cover no-repeat;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        padding: 50px 0;
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        background: url('../images/icon/decor/pattern.png');
+    }
+}

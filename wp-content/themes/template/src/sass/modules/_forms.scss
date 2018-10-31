@@ -1,0 +1,85 @@
+.wpcf7-form {
+    display: flex;
+    align-items: center;
+    margin-top: 75px;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+#form-footer-singup {
+    @extend .wpcf7-form;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 0;
+    width: 100%;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        margin-bottom: 50px;
+        max-width: 400px;
+    }
+
+    &.in-focus {
+
+        .label-placeholder {
+            left: 0;
+            bottom: 100%;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .form-control {
+            background: transparent;
+            border-color: transparent;
+        }
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    .label-placeholder {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        color: $primary;
+        transition: .5s;
+        z-index: 4;
+        cursor: pointer;
+    }
+
+    .form-control {
+        padding-left: 0;
+        background: #0a0f16;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        color: #fff;
+        transition: .5s;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: $primary;
+        transition: .5s;
+    }
+}
+
+.format-modal-body__form {
+    padding: 0 20px;
+
+    .form-group {
+        width: 100%;
+        max-width: 340px;
+    }
+}
+

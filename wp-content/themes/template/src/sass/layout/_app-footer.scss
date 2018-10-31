@@ -1,0 +1,47 @@
+.footer-singup-content {
+    position: relative;
+    padding: 80px 0;
+    background: url('../images/bg/footer-singup-bg.jpg') 50% 50% /cover no-repeat;
+
+    &::before {
+        content: '';
+        @extend %pos;
+        background: url('../images/icon/decor/pattern.png');
+    }
+}
+
+.footer-item-content {
+    position: relative;
+    padding: 15px 0;
+    background: rgba(#232f42 , .96);
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .footer-menu {
+
+        &-list {
+
+            &-item {
+
+                &__link {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #fff;
+                    opacity: .8;
+                    transition: .5s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    @media (max-width: map_get($grid-breakpoints, md)) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

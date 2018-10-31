@@ -1,0 +1,26 @@
+#for-who {
+    padding: 120px 0;
+    background: #effaff;
+    margin-top: -50px;
+}
+
+.for-who-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        margin-bottom: 20px;
+        padding: 0 30px;
+    }
+
+    &__icon {
+        margin-bottom: 15px;
+    }
+
+    &__descr {
+        text-align: center;
+        font-size: 18px;
+    }
+}

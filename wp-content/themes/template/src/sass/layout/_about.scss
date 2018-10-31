@@ -1,0 +1,95 @@
+#about {
+    padding: 120px 0 140px;
+    background: #e6f6ff;
+    overflow: hidden;
+    z-index: 3;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding-bottom: 430px;
+    }
+
+    .big-circle-decor {
+        position: absolute;
+        left: 70%;
+        bottom: 65px;
+        width: 450px;
+        height: 450px;
+        border: 100px solid #ffffff;
+        border-radius: 50%;
+        opacity: .5;
+        z-index: -2;
+    }
+
+    .small-circle-decor {
+        position: absolute;
+        left: 5%;
+        bottom: 140px;
+        width: 110px;
+        height: 110px;
+        border: 30px solid #ffffff;
+        border-radius: 50%;
+        opacity: .5;
+        z-index: -2;
+    }
+}
+
+.about-item {
+    padding: 50px 60px;
+    background: #fff;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        padding: 50px 20px;
+    }
+
+    &-name {
+        text-transform: uppercase;
+    }
+
+    &-position {
+        position: relative;
+        display: inline-block;
+        padding-right: 90px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 70px;
+            height: 1px;
+            background: $primary;
+        }
+    }
+
+    .btn {
+        padding: 15px 60px;
+    }
+}
+
+.about-picture {
+    @extend %pos;
+    top: -20px;
+    bottom: -40px;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        padding-top: 400px;
+    }
+
+    &-bg {
+        @extend %pos;
+        background: #232f42;
+    }
+
+    &-img {
+        @extend %pos;
+        top: auto;
+        padding-top: 700px;
+        @extend %img;
+        background-size: contain;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            padding-top: 400px;
+        }
+    }
+}

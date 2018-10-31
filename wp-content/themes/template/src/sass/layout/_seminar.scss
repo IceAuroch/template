@@ -1,0 +1,55 @@
+#seminar {
+    padding: 80px 0 100px;
+    overflow: hidden;
+
+    .section-title {
+
+        &::before {
+            content: '';
+            @extend %pos;
+            background: url('../images/icon/decor/pattern-title.png');
+            transform: translateX(-110%)
+        }
+    }
+}
+
+.seminar-item {
+
+    &-list {
+
+        &-item {
+            position: relative;
+            padding-left: 40px;
+            font-size: 18px;
+            margin-bottom: 15px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url('../images/icon/marker/seminar/seminar-list-marker.svg');
+            }
+        }
+    }
+}
+
+.seminar-img {
+    @extend %pos;
+    bottom: -130px;
+    width: 45vw;
+    @extend %img;
+    z-index: 20;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        position: relative;
+        bottom: 0;
+        margin-top: 30px;
+        padding-top: 300px;
+        width: 100%;
+    }
+}
