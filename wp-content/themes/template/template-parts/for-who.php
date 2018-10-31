@@ -15,7 +15,7 @@
                     <div class="col-sm-3 col-lg-2 p-0">
                         <div class="for-who-item">
                             <div  class="reviews-slider-item-img" style="background-image:
-                                    url(<?php echo get_sub_field('for_who_image'); ?>)">
+                                    url(<?php echo get_sub_field('for_who_image', 'large')['url']; ?>)">
                             </div>
 
                             <div class="for-who-item__descr">

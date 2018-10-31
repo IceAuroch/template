@@ -62,7 +62,7 @@ if ($package->have_posts()):
 
             <div class="format-modal-header">
                 <h3 class="format-modal-header__title">
-                    Курс ""
+                    Курс "<span id="format-name"></span>"
                 </h3>
             </div>
 

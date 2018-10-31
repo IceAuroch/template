@@ -2114,7 +2114,12 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
      */
     $('[data-idModal]').on('click', function (e) {
         e.preventDefault();
-        $('[name="package"]').val($(this).data('package'));
+
+        var name = $(this).data('package');
+
+        $('[name="package"]').val(name);
+        $('#format-name').text(name);
+
         var idModal = $(this).data('idmodal');
         $('#' + idModal).addClass('active');
         $('.modal-mask').addClass('active');

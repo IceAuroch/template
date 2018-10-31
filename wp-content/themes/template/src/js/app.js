@@ -66,7 +66,12 @@ window.jQuery = window.$ = jquery;
      */
     $('[data-idModal]').on('click', function (e) {
         e.preventDefault();
-        $('[name="package"]').val($(this).data('package'));
+
+        const name = $(this).data('package');
+
+        $('[name="package"]').val(name);
+        $('#format-name').text(name);
+
         var idModal = $(this).data('idmodal');
         $(`#${idModal}`).addClass('active');
         $('.modal-mask').addClass('active');

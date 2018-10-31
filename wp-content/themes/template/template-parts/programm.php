@@ -21,10 +21,10 @@
                                     </div>
                                 </div>
                                 <div class="programm-tabs-content-item-description">
-                                    <?php echo wp_trim_words(get_sub_field('step_desc'), 10, ''); ?>
+                                    <?php echo get_sub_field('step_desc'); ?>
                                 </div>
                                 <div class="programm-tabs-content-item-body">
-                                    <?php echo get_sub_field('step_desc'); ?>
+                                    <?php echo get_sub_field('step_content'); ?>
                                 </div>
                             </div>
 
@@ -37,15 +37,15 @@
                 <div class="programm-tabs-prev">
 
                     <?php if (have_rows('program_step', 29)):
-                    while (have_rows('program_step', 29)): the_row(); ?>
+                       while (have_rows('program_step', 29)): the_row(); ?>
 
                     <div class="programm-tabs-prev-item">
                         <div class="programm-tabs-prev-item-title">
-                            Lorem ipsum dolor sit.1
+                           <?php echo get_sub_field('step_image_desc'); ?>
                         </div>
 
                         <div class="programm-tabs-prev-item-img" style="background-image:
-                             url(<?php echo get_sub_field('step_image'); ?>);"></div>
+                             url(<?php echo get_sub_field('step_image')['url']; ?>);"></div>
                     </div>
 
                     <?php endwhile; endif; ?>
