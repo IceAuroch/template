@@ -1,7 +1,7 @@
 .menu {
     position: relative;
 
-    @media (max-width: map_get($grid-breakpoints, md)) {
+    @media (max-width: map_get($grid-breakpoints, lg)) {
         position: fixed;
         top: 0;
         left: 0;

@@ -10,7 +10,10 @@
                         НА СЕМИНАР СЕГОДНЯ
                     </h2>
 
-                    <?php echo do_shortcode('[contact-form-7 id="59" title="Запись на семинар"]'); ?>
+                    <div id="footer-singup">
+                        <?php echo do_shortcode('[contact-form-7 id="89" title="Запись на семинар вторая"]'); ?>
+                    </div>
+
 
                 </div>
             </div>

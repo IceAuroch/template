@@ -14,15 +14,18 @@ if ($about->have_posts()): $about->the_post(); ?>
                         <div class="about-item-position mt-3 mb-5">
                             Автор и ведущий семинара
                         </div>
+
                         <?php if (have_rows('descriptions', 39)):
                             while (have_rows('descriptions', 39)): the_row(); ?>
                                 <p class="about-item-descrption mb-4">
                                     <?php echo get_sub_field('description'); ?>
                                 </p>
-                            <?php endwhile; endif; ?>
-                        <a href="#wpcf7-f59-o2" class="btn btn-primary scroll-link">Записаться</a>
+                         <?php endwhile; endif; ?>
+
+                        <a href="#footer-singup" class="btn btn-primary scroll-link">Записаться</a>
                     </div>
                 </div>
+
                 <div class="col-sm-5 col-lg-6">
                     <div class="about-picture">
                         <div class="about-picture-bg"></div>

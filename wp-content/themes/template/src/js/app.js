@@ -22,6 +22,13 @@ window.jQuery = window.$ = jquery;
         }
     });
 
+    if($(window).width() < 992) {
+        $('.scroll-link').on('click' , function () {
+            $('.burger-menu').removeClass('active');
+            $('.menu').slideUp();
+        })
+    }
+
 
     /**
      * Form-label

@@ -10,7 +10,7 @@
                     <p class="secondary-item-description my-4">
                         <?php echo get_field('second_desc', 15); ?>
                     </p>
-                    <a href="#wpcf7-f59-o2" class="btn btn-primary scroll-link">Записаться</a>
+                    <a href="#footer-singup" class="btn btn-primary scroll-link">Записаться</a>
                 </div>
             </div>
         </div>

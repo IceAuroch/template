@@ -10,10 +10,11 @@
                 <div class="programm-item">
                     <div class="programm-tabs-content">
 
-                        <?php if (have_rows('program_step', 29)):
+                        <?php $count=0;
+                        if (have_rows('program_step', 29)):
                             while (have_rows('program_step', 29)): the_row(); ?>
 
-                            <div class="programm-tabs-content-item" data-index="0">
+                            <div class="programm-tabs-content-item" data-index="<?= $count; ?>">
                                 <div class="programm-tabs-content-item-title">
                                     <div class="programm-tabs-content-item-title__decor"></div>
                                     <div class="programm-tabs-content-item-title__text">
@@ -28,11 +29,12 @@
                                 </div>
                             </div>
 
-                        <?php endwhile; endif; ?>
+                        <?php  $count++; endwhile; endif; ?>
 
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-4">
                 <div class="programm-tabs-prev">
 
